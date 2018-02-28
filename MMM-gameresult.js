@@ -18,7 +18,7 @@ Module.register("MMM-gameresult", {
         this.gamesLoaded = false;
         var self = this;
    	}, 
-
+ 
 	/*
 	 * getData
 	 * function example return data and show it in the module wrapper
