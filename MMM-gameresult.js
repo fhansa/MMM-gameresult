@@ -17,7 +17,7 @@ Module.register("MMM-gameresult", {
         var self = this;
         this.gamesLoaded = false;
         var self = this;
-   	},
+   	}, 
 
 	/*
 	 * getData
