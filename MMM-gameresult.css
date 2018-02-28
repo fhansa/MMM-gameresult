@@ -1,0 +1,29 @@
+/*
+ *
+ * gameresult
+ *
+ * Fredrik Hansson  
+ * MIT Licensed.
+ *
+ * Custom here your css module
+ *
+ */
+ .gameresult {
+    width:300px;
+}
+
+.resultgame {
+    margin-top: 15px;
+}
+
+.resultdivider {
+    margin-bottom:20px;
+    /*border-top:1px solid #999;*/
+}
+
+.resultheader {
+    border-bottom: 1px dashed #999;
+}
+.resultwide {
+    width:50%;
+}

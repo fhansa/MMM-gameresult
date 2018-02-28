@@ -1,0 +1,23 @@
+{
+  "name": "mmm-gameresult",
+  "version": "1.0.0",
+  "description": "Gameresult for Magic Mirror",
+  "main": "MMM-gameresult.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fhansa/MMM-gameresult.git"
+  },
+  "keywords": [
+    "Magic",
+    "Mirror"
+  ],
+  "author": "Fredrik Hansson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fhansa/MMM-gameresult/issues"
+  },
+  "homepage": "https://github.com/fhansa/MMM-gameresult#readme"
+}

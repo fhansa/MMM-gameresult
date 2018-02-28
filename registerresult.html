@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
+        <style>
+            .isa {
+                background-image: url('/gameresult/duckYellow.png');
+                background-size:contain;
+                background-repeat: no-repeat;
+            }
+            .fredrik {
+                background-image: url('/gameresult/duckPurple.png');
+                background-size:contain;
+                background-repeat: no-repeat;
+            }
+            .marta {
+                background-image: url('/gameresult/duckRed.png');
+                background-size:contain;
+                background-repeat: no-repeat;
+            }
+        </style>
+    </head>
+    <body>
+        <form action='registerresult' method='GET'>
+            <div class="small">
+                <p>Registrera nytt resultat på FIM-listan</p>
+                <select name="gametype">
+                    <option>Rummykub</option>
+                    <option>Mexican Train</option>
+                    <option>Domino</option>
+                    <option>Monopol</option>
+                </select>
+                <input type="date" name="speldatum">
+                <table>
+                    <tr><td>Vem</td><td>Vinster</td><td>Poäng</td></tr>
+                    <tr><td class="isa">&nbsp;</td><td><input type="text" size="5" /></td><td><input type="text" size="5" /></td></tr>
+                    <tr><td class="fredrik">&nbsp;</td><td><input type="text" size="5" /></td><td><input type="text" size="5" /></td></tr>
+                    <tr><td class="marta">&nbsp;</td><td><input type="text" size="5" /></td><td><input type="text" size="5" /></td></tr>
+                    
+                </table>
+                <input type='submit' />
+            </div>
+        </form>
+    </body>
+</html>
