@@ -1,0 +1,50 @@
+{
+            "players":[   { "name":"Isa", "shortName":"I", "icon":"duckYellow.png", "color":"#ffe154" },
+                        { "name":"Marta", "shortName":"M", "icon":"duckRed.png", "color":"#f64274" },
+                        { "name":"Fredrik", "shortName":"F", "icon":"duckPurple.png", "color":"#ed54ff" }
+             ],
+            "lastgame" : 
+            {   "gamename": "Rummykub", 
+                "playeddate":"2018-02-24", 
+                "playerresults":[
+                    { "name":"I", "wins":"3", "result":"0", "icon":"duckI.png" },
+                    { "name":"F", "wins":"0", "result":"46"},
+                    { "name":"M", "wins":"0", "result":"25"}
+                ]
+            },
+            "gameStandings" : [
+                {   "gamename": "Rummykub", 
+                    "playeddate":"2018-02-24", 
+                    "playerresults":[
+                        { "name":"I", "wins":"26", "result":"870" },
+                        { "name":"M", "wins":"22", "result":"987"},
+                        { "name":"F", "wins":"24", "result":"876"}
+                    ]
+                },
+                {   "gamename": "Mexican Train", 
+                    "playeddate":"2018-02-12", 
+                    "playerresults":[
+                        { "name":"F", "wins":"2", "result":"24" },
+                        { "name":"I", "wins":"3", "result":"23"},
+                        { "name":"M", "wins":"3", "result":"22"}
+                    ]
+                },
+                {   "gamename": "Monopol", 
+                    "playeddate":"2018-02-1216", 
+                    "playerresults":[
+                        { "name":"F", "wins":"5", "result":"24" },
+                        { "name":"I", "wins":"1", "result":"23"},
+                        { "name":"M", "wins":"1", "result":"22"}
+                    ]
+                },
+                {   "gamename": "Domino", 
+                    "playeddate":"2018-01-12", 
+                    "playerresults":[
+                        { "name":"F", "wins":"2", "result":"24" },
+                        { "name":"I", "wins":"3", "result":"23"},
+                        { "name":"M", "wins":"3", "result":"22"}
+                    ]
+                }
+            ]
+}
+        

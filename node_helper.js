@@ -6,6 +6,8 @@
  */
 
 var NodeHelper = require("node_helper");
+var fs = require("fs");
+var path = require('path');
 
 module.exports = NodeHelper.create({
 
@@ -20,6 +22,12 @@ module.exports = NodeHelper.create({
 	 * argument payload mixed - The payload of the notification.
 	 */
 	socketNotificationReceived: function(notification, payload) {
+		if(notification === "MMM-gameresult-GET_GAMES") {
+			console.log("GETTING GAMES");
+			var result = fs.readFileSync(path.join(__dirname, 'games.txt'), "utf-8");
+			console.log(result);
+			this.sendSocketNotification("MMM-gameresult-GAMES", JSON.parse(result));
+		}
 	},
 
 	// Example function send notification test

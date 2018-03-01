@@ -17,8 +17,9 @@ Module.register("MMM-gameresult", {
         var self = this;
         this.gamesLoaded = false;
         var self = this;
+        this.getGames();
    	}, 
- 
+
 	/*
 	 * getData
 	 * function example return data and show it in the module wrapper
@@ -28,57 +29,7 @@ Module.register("MMM-gameresult", {
      * P:237, 84,255 - ed54ff
 	 */
 	getGames: function() {
-        var self = this;
-        this.games = { 
-            players:[   { name:"Isa", shortName:"I", icon:"duckYellow.png", color:"#ffe154" },
-                        { name:"Marta", shortName:"M", icon:"duckRed.png", color:"#f64274" },
-                        { name:"Fredrik", shortName:"F", icon:"duckPurple.png", color:"#ed54ff" }
-             ],
-            lastgame : 
-            {   gamename: "Rummykub", 
-                playeddate:"2018-02-24", 
-                playerresults:[
-                    { name:"I", wins:"3", result:"0", icon:"duckI.png" },
-                    { name:"F", wins:"0", result:"46"},
-                    { name:"M", wins:"0", result:"25"}
-                ]
-            },
-            gameStandings : [
-                {   gamename: "Rummykub", 
-                    playeddate:"2018-02-24", 
-                    playerresults:[
-                        { name:"I", wins:"26", result:"870" },
-                        { name:"M", wins:"22", result:"987"},
-                        { name:"F", wins:"24", result:"876"}
-                    ]
-                },
-                {   gamename: "Mexican Train", 
-                    playeddate:"2018-02-12", 
-                    playerresults:[
-                        { name:"F", wins:"2", result:"24" },
-                        { name:"I", wins:"3", result:"23"},
-                        { name:"M", wins:"3", result:"22"}
-                    ]
-                },
-                {   gamename: "Domino", 
-                    playeddate:"2017-12-18", 
-                    playerresults:[
-                        { name:"I", wins:"16", result:"" },
-                        { name:"F", wins:"2", result:""},
-                        { name:"M", wins:"13", result:""}
-                    ]
-                },
-                {   gamename: "Monolpol", 
-                    playeddate:"2017-12-11", 
-                    playerresults:[
-                        { name:"I", wins:"1", result:"" },
-                        { name:"M", wins:"3", result:""},
-                        { name:"F", wins:"2", result:""}
-                    ]
-                }                           
-            ]
-        };
-        this.gamesLoaded = true;
+        this.sendSocketNotification("MMM-gameresult-GET_GAMES", "");
 	},
 
     /*
@@ -155,9 +106,6 @@ Module.register("MMM-gameresult", {
     //
 	getDom: function() {
         var self = this;
-        
-        // Populate games-property
-        this.getGames();
 
 		// create element wrapper for show into the module
         var wrapper = document.createElement("div");
@@ -170,6 +118,7 @@ Module.register("MMM-gameresult", {
 
         }
         else {
+            console.log(this.games);
             // Header 
             var tableWrapper = document.createElement("table");
             tableWrapper.className = "small align-left";
@@ -205,8 +154,17 @@ Module.register("MMM-gameresult", {
 
 	getStyles: function () {
 		return [
-			"gameresult.css",
+			"MMM-gameresult.css",
 		];
-	},
+    },
+    
+    socketNotificationReceived: function (notification, payload) {
+        //console.log("Working notification system. Notification:", notification, "payload: ", payload); 
+        if (notification === "MMM-gameresult-GAMES") {
+            this.games = payload;
+            this.gamesLoaded = true;
+            this.updateDom();
+        }
+    }
 
 });
