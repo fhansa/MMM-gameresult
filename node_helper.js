@@ -25,7 +25,6 @@ module.exports = NodeHelper.create({
 		if(notification === "MMM-gameresult-GET_GAMES") {
 			console.log("GETTING GAMES");
 			var result = fs.readFileSync(path.join(__dirname, 'games.txt'), "utf-8");
-			console.log(result);
 			this.sendSocketNotification("MMM-gameresult-GAMES", JSON.parse(result));
 		}
 	},

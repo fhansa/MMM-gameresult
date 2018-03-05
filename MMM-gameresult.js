@@ -42,7 +42,7 @@ Module.register("MMM-gameresult", {
                 return 'background-image: url("/modules/MMM-gameresult/img/' + player.icon + '"); background-size:contain; background-repeat:no-repeat;';
             }
         }
-        console.log("NO");
+        //console.log("NO");
         return "";
     },
 
@@ -89,7 +89,6 @@ Module.register("MMM-gameresult", {
 
             cell = document.createElement("td");  row.appendChild(cell);
             cell.innerHTML  = "&nbsp"; cell.style = this.getIcon(player.name);
-            console.log(cell.style);
 
             cell = document.createElement("td"); row.appendChild(cell);
             cell.innerHTML  = player.wins; cell.className = "align-right"; 
@@ -118,7 +117,7 @@ Module.register("MMM-gameresult", {
 
         }
         else {
-            console.log(this.games);
+            //console.log(this.games);
             // Header 
             var tableWrapper = document.createElement("table");
             tableWrapper.className = "small align-left";
